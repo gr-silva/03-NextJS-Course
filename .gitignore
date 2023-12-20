@@ -27,7 +27,7 @@ Latest commit 3a8c2f9 26 days ago
  1 contributor
 128 lines (95 sloc)  1.98 KB
 
-backend/data/
+backend/data/users.db
 
 # Logs
 logs
