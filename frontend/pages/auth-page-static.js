@@ -1,3 +1,5 @@
+import { withSessionHOC } from "../src/services/auth/session";
+
 const AuthPageStatic = (props) => {
   return (
     <div>
@@ -7,4 +9,4 @@ const AuthPageStatic = (props) => {
   );
 };
 
-export default AuthPageStatic;
+export default withSessionHOC(AuthPageStatic);
