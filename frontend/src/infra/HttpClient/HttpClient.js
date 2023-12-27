@@ -8,10 +8,10 @@ export const HttpClient = async (fetchUrl, fetchOptions) => {
     body: fetchOptions.body ? JSON.stringify(fetchOptions.body) : null,
   }).then(async (serverResponse) => {
     return {
-      body: await serverResponse.json(),
       ok: serverResponse.ok,
       status: serverResponse.status,
       statusText: serverResponse.statusText,
+      body: await serverResponse.json(),
     };
   });
 };
