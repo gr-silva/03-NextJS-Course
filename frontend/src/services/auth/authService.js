@@ -21,7 +21,7 @@ export const authService = {
             refresh_token,
           },
         });
-        console.log(JSON.stringify(response, null, 2));
+        console.log(response);
       });
   },
   async getSession(ctx = null) {
