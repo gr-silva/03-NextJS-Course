@@ -1,12 +1,13 @@
 import { tokenService } from "../../services/auth/tokenService";
 import nookies from "nookies";
 
-export const HttpClient = async (fetchUrl, fetchOptions) => {
+export const HttpClient = async (fetchUrl, fetchOptions = {}) => {
+  const defaultHeaders = fetchOptions.headers || {};
   const options = {
     ...fetchOptions,
     headers: {
       "Content-Type": "application/json",
-      ...fetchOptions.headers,
+      ...defaultHeaders,
     },
     body: fetchOptions.body ? JSON.stringify(fetchOptions.body) : null,
   };
