@@ -16,7 +16,6 @@ export const withSession = (_function) => {
 
       return _function(modifiedCtx);
     } catch (error) {
-      console.log(error);
       return {
         redirect: {
           permanent: false,
